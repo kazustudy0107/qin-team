@@ -8,14 +8,12 @@ type Props = {
 
 export const Layout: FC<Props> = ({ children, title = "Mantine" }) => {
   return (
-    <div className="flex min-h-screen">
+    <div className="min-h-screen">
       <Head>
         <title>{title}</title>
       </Head>
       <header></header>
-      <main className="flex flex-1 flex-col justify-center p-4">
-        {children}
-      </main>
+      <main>{children}</main>
       <footer></footer>
     </div>
   );
