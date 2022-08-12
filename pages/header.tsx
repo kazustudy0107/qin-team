@@ -7,11 +7,11 @@ export const Header = () => {
   return (
     <Layout title="header">
         <Container className="h-16 flex place-content-between font-bold">
-          <Group>
+          <Group className="text-xl">
             <Link href="/">Shimabu IT University</Link>
           </Group>
 
-          <Group className="flex">
+          <Group className="flex text-lg">
             <Link href="/about">
               <a className="m-2 gap-3 py-2">About</a>
             </Link>
@@ -26,6 +26,7 @@ export const Header = () => {
             </Link>
             <Button variant="outline" color="dark" size="xs">
               {<Moon />}
+              
             </Button>
           </Group>
         </Container>
