@@ -8,7 +8,7 @@ type Props = {
 
 export const Layout: FC<Props> = ({ children, title = "Mantine" }) => {
   return (
-    <div className="min-h-screen">
+    <div>
       <Head>
         <title>{title}</title>
       </Head>
