@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { Blog } from "./blog";
 import { Header } from "./header";
 import { Hero } from "./Hero";
+import { Portfolio } from "./Portfolio";
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <Hero />
       <Blog />
+      <Portfolio />
     </div>
   );
 };
