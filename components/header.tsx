@@ -1,6 +1,6 @@
 import { ActionIcon, Container, Group } from "@mantine/core";
 import Link from "next/link";
-import { Layout } from "../components/Layout";
+import { Layout } from "./Layout";
 import { Moon } from "tabler-icons-react";
 
 export const Header = () => {

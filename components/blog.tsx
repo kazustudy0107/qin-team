@@ -1,6 +1,6 @@
 import { Button, Center, Container, Group } from "@mantine/core";
 import React from "react";
-import { Layout } from "../components/Layout";
+import { Layout } from "./Layout";
 
 export const Blog = () => {
   return (

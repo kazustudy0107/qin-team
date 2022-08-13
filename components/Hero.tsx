@@ -1,7 +1,7 @@
 import { Container, Group, Title } from "@mantine/core";
 import Link from "next/link";
 import { BrandTwitter, BrandFacebook, Rss } from "tabler-icons-react";
-import { Layout } from "../components/Layout";
+import { Layout } from "./Layout";
 
 export const Hero = () => {
   return (

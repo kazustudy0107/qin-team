@@ -1,6 +1,6 @@
 import { Button, Center, Container } from "@mantine/core";
 import React from "react";
-import { Layout } from "../components/Layout";
+import { Layout } from "./Layout";
 import { CustomCard } from "./CustomCard";
 
 export const Portfolio = () => {
