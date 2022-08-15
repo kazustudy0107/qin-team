@@ -5,8 +5,8 @@ import { Moon } from "tabler-icons-react";
 
 export const Header = () => {
   return (
-    <Layout title="header" >
-      <Container className="flex h-16 place-content-between font-bold">
+    <Layout title="header">
+      <Container className="flex h-16 place-content-between bg-white font-bold">
         <Group className="text-xl">
           <Link href="/">Shimabu IT University</Link>
         </Group>
@@ -24,7 +24,9 @@ export const Header = () => {
           <Link href="/Contact">
             <a className="m-2 gap-3 py-2">Contact</a>
           </Link>
-          <ActionIcon size="lg" variant="outline">{<Moon />}</ActionIcon>
+          <ActionIcon size="lg" variant="outline">
+            {<Moon />}
+          </ActionIcon>
         </Group>
       </Container>
     </Layout>
