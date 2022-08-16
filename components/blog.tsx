@@ -25,14 +25,16 @@ export const Blog: FC = () => {
     <Layout title="Blog">
       <Container>
         <Stack justify="flex-start" spacing="xl">
-          <Title className="border-b-2 pb-5 text-2xl font-bold">Blog</Title>
+          <Title order={2} className="border-b-2 pb-5">
+            Blog
+          </Title>
           {articles.map((article) => (
             <Box
               key={article.id}
               component={NextLink}
               href={`/blog/detail/${article.id}`}
             >
-              <Title order={2} className="mb-2">
+              <Title order={3} className="mb-2">
                 {article.header}
               </Title>
               <Text className="mb-2">{article.body}</Text>
