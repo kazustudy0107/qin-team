@@ -1,17 +1,19 @@
-import { Button, Center, Container } from "@mantine/core";
+import { Button, Center, Container, Title } from "@mantine/core";
 import React from "react";
-import { Layout } from "./Layout";
+import { Layout } from "../Layout";
 import { CustomCard } from "./CustomCard";
 
 export const Portfolio = () => {
   return (
     <Layout title="Portfolio">
       <Container className="mt-24">
-        <h1 className="mb-5 text-2xl font-bold">Portfolio</h1>
+        <Title order={2} className="border-b-2 pb-5 mb-6">
+          Portfolio
+        </Title>
         <CustomCard />
       </Container>
-      <Center>
-        <Button color="dark" radius="xl" size="xs">
+      <Center className="mt-6">
+        <Button color="dark" radius="xl">
           View All
         </Button>
       </Center>
