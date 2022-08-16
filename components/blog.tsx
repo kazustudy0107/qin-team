@@ -1,54 +1,47 @@
-import { Button, Center, Container, Group } from "@mantine/core";
-import React from "react";
+import {
+  Box,
+  Button,
+  Center,
+  Container,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import { NextLink } from "@mantine/next";
+import React, { FC } from "react";
 import { Layout } from "./Layout";
 
-export const Blog = () => {
+const articles = [...Array(5)].map((blog, index) => {
+  return {
+    id: index,
+    header: `This is a header ${index}`,
+    body: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ",
+    date: "2022.07.11",
+  };
+});
+
+export const Blog: FC = () => {
   return (
     <Layout title="Blog">
       <Container>
-        <h1 className="mb-5 text-2xl font-bold">Blog</h1>
-        <Group direction="column">
-          <h2 className="text-xl font-bold leading-none">This is a header</h2>
-          <p className="leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-          <p className="mb-6 text-xs text-gray-400">2022.07.11</p>
-        </Group>
-        <Group direction="column">
-          <h2 className="text-xl font-bold leading-none">This is a header</h2>
-          <p className="leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-          <p className="mb-6 text-xs text-gray-400">2022.07.11</p>
-        </Group>
-        <Group direction="column">
-          <h2 className="text-xl font-bold leading-none">This is a header</h2>
-          <p className="leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-          <p className="mb-6 text-xs text-gray-400">2022.07.11</p>
-        </Group>
-        <Group direction="column">
-          <h2 className="text-xl font-bold leading-none">This is a header</h2>
-          <p className="leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-          <p className="mb-6 text-xs text-gray-400">2022.07.11</p>
-        </Group>
-        <Group direction="column">
-          <h2 className="text-xl font-bold leading-none">This is a header</h2>
-          <p className="leading-none">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
-          <p className="mb-6 text-xs text-gray-400">2022.07.11</p>
-        </Group>
-        <Center>
-          <Button color="dark" radius="xl" size="xs">
+        <Stack justify="flex-start" spacing="xl">
+          <Title className="border-b-2 pb-5 text-2xl font-bold">Blog</Title>
+          {articles.map((article) => (
+            <Box
+              key={article.id}
+              component={NextLink}
+              href={`/blog/detail/${article.id}`}
+            >
+              <Title order={2} className="mb-2">
+                {article.header}
+              </Title>
+              <Text className="mb-2">{article.body}</Text>
+              <Text className="text-xs text-gray-400">{article.date}</Text>
+            </Box>
+          ))}
+        </Stack>
+        <Center className="mt-6">
+          <Button color="dark" radius="xl">
             View All
           </Button>
         </Center>
@@ -56,5 +49,3 @@ export const Blog = () => {
     </Layout>
   );
 };
-
-// export default Blog;
