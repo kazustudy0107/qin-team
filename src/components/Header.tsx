@@ -1,11 +1,9 @@
 import { ActionIcon, Container, Group } from "@mantine/core";
 import Link from "next/link";
-import { Layout } from "./Layout";
 import { Moon } from "tabler-icons-react";
 
 export const Header = () => {
   return (
-    <Layout title="header">
       <div className="bg-white">
         <Container className="flex h-16 place-content-between bg-white font-bold">
           <Group className="text-xl">
@@ -30,6 +28,5 @@ export const Header = () => {
           </Group>
         </Container>
       </div>
-    </Layout>
   );
 };

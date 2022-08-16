@@ -9,7 +9,6 @@ import {
 } from "@mantine/core";
 import { NextLink } from "@mantine/next";
 import React, { FC } from "react";
-import { Layout } from "./Layout";
 
 const articles = [...Array(5)].map((blog, index) => {
   return {
@@ -22,7 +21,6 @@ const articles = [...Array(5)].map((blog, index) => {
 
 export const Blog: FC = () => {
   return (
-    <Layout title="Blog">
       <Container>
         <Stack justify="flex-start" spacing="xl">
           <Title order={2} className="border-b-2 pb-5">
@@ -48,6 +46,5 @@ export const Blog: FC = () => {
           </Button>
         </Center>
       </Container>
-    </Layout>
   );
 };

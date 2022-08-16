@@ -1,11 +1,9 @@
 import { Container, Group, Title } from "@mantine/core";
 import Link from "next/link";
 import { BrandTwitter, BrandFacebook, Rss } from "tabler-icons-react";
-import { Layout } from "./Layout";
 
 export const Hero = () => {
   return (
-    <Layout title="Hero">
       <div className="bg-pink-600">
         <Container className="mb-20 flex justify-between bg-pink-600 text-center text-white">
           <Group className="flex-col">
@@ -21,6 +19,5 @@ export const Hero = () => {
           </Group>
         </Container>
       </div>
-    </Layout>
   );
 };
