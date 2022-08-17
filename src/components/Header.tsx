@@ -6,21 +6,21 @@ export const Header = () => {
   return (
     <div className="bg-white">
       <Container className="flex h-16 place-content-between bg-white font-bold">
-        <Group className="text-xl">
+        <Group className="text-xl ">
           <Link href="/">Shimabu IT University</Link>
         </Group>
-        <Group className="flex text-lg">
+        <Group className="gap-4 text-lg">
           <Link href="/about">
-            <a className="m-2 gap-3 py-2">About</a>
+            <a className="">About</a>
           </Link>
           <Link href="/blog">
-            <a className="m-2 gap-3 py-2">Blog</a>
+            <a>Blog</a>
           </Link>
           <Link href="/portfolio">
-            <a className="m-2 gap-3 py-2">Portfolio</a>
+            <a>Portfolio</a>
           </Link>
           <Link href="/contact">
-            <a className="m-2 gap-3 py-2">Contact</a>
+            <a>Contact</a>
           </Link>
           <ActionIcon size="lg" variant="outline">
             {<Moon />}
