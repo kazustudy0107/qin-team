@@ -4,7 +4,7 @@ import { Footer } from "src/components/Footer";
 // import { GitHub } from "src/components/GitHub";
 import { Header } from "src/components/Header";
 import { Hero } from "src/components/Hero";
-import { Portfolio } from "src/components/portfolio/PortfolioPage";
+import { PortfolioPage } from "src/components/portfolio/PortfolioPage";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,9 @@ const Home: NextPage = () => {
       </div>
       <Hero />
       <BlogPage />
-      <Portfolio />
+      <div className="mt-32">
+        <PortfolioPage />
+      </div>
       {/* <GitHub /> */}
       <Footer />
     </div>

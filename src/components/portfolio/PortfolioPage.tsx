@@ -2,10 +2,10 @@ import { Button, Center, Container, Title } from "@mantine/core";
 import React from "react";
 import { CustomCard } from "src/components/portfolio/CustomCard";
 
-export const Portfolio = () => {
+export const PortfolioPage = () => {
   return (
     <div>
-      <Container className="mt-24">
+      <Container>
         <Title order={2} className="mb-6 border-b-2 pb-5">
           Portfolio
         </Title>
