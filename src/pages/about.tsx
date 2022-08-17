@@ -10,7 +10,7 @@ const About = () => {
         <Header />
       </div>
       <Container className="min-h-screen">
-        <Title order={2} className="border-b-2">
+        <Title order={2} className="border-b-2 pb-5">
           About
         </Title>
         <Title order={3} className="mt-6 mb-6">
