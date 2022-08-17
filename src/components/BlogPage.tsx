@@ -19,7 +19,7 @@ const articles = [...Array(5)].map((blog, index) => {
   };
 });
 
-export const Blog: FC = () => {
+export const BlogPage: FC = () => {
   return (
       <Container>
         <Stack justify="flex-start" spacing="xl">

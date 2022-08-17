@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Blog } from "src/components/Blog";
+import { BlogPage } from "src/components/BlogPage";
 import { Footer } from "src/components/Footer";
 // import { GitHub } from "src/components/GitHub";
 import { Header } from "src/components/Header";
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <Header />
       </div>
       <Hero />
-      <Blog />
+      <BlogPage />
       <Portfolio />
       {/* <GitHub /> */}
       <Footer />
