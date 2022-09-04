@@ -7,6 +7,7 @@ import { GetStaticProps, NextPage } from "next";
 import { client } from "src/libs/client";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import Link from "next/link";
+import dayjs from "dayjs";
 
 export type Blog = {
   id: string;
@@ -23,19 +24,22 @@ const Blog: NextPage<Props> = (props) => {
       <div className="sticky top-0 z-50">
         <Header />
       </div>
-      <Container>
+      <Container className="min-h-screen">
         <Title order={2} className="border-b-2 pb-5">
           Blog
         </Title>
         {/* <div className="mt-6 mb-6"><BlogPage /></div> */}
-        <p>{`記事の総数:${props.totalCount}`}</p>
         <ul>
           {props.contents.map((content) => {
             return (
-              <li key={content.id}>
+              <li className="my-6" key={content.id}>
                 <Link href={`/blog/${content.id}`}>
-                  <a>{content.title}</a>
+                  <a className="text-xl font-bold">{content.title}</a>
                 </Link>
+                <br />
+                <time className="block text-xs text-gray-500">
+                  {dayjs(content.createdAt).format("YYYY年MM月DD日")}
+                </time>
               </li>
             );
           })}

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { BlogPage } from "src/components/BlogPage";
+// import { BlogPage } from "src/components/BlogPage";
 import { Footer } from "src/components/Footer";
 // import { GitHub } from "src/components/GitHub";
 import { Header } from "src/components/Header";
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <Header />
       </div>
       <Hero />
-      <BlogPage />
+      {/* <BlogPage /> */}
       <div className="mt-32">
         <PortfolioPage />
       </div>
