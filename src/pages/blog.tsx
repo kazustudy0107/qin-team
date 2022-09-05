@@ -1,8 +1,7 @@
-import { Container, Title } from "@mantine/core";
+import { Container, Text, Title } from "@mantine/core";
 import React from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
-// import { BlogPage } from "src/components/BlogPage";
 import { GetStaticProps, NextPage } from "next";
 import { client } from "src/libs/client";
 import { MicroCMSListResponse } from "microcms-js-sdk";
@@ -28,7 +27,6 @@ const Blog: NextPage<Props> = (props) => {
         <Title order={2} className="border-b-2 pb-5">
           Blog
         </Title>
-        {/* <div className="mt-6 mb-6"><BlogPage /></div> */}
         <ul>
           {props.contents.map((content) => {
             return (
@@ -36,7 +34,9 @@ const Blog: NextPage<Props> = (props) => {
                 <Link href={`/blog/${content.id}`}>
                   <a className="text-xl font-bold">{content.title}</a>
                 </Link>
-                <br />
+                <Text size="sm" weight={500} lineClamp={2}>
+                  {content.content}
+                </Text>
                 <time className="block text-xs text-gray-500">
                   {dayjs(content.createdAt).format("YYYY年MM月DD日")}
                 </time>
