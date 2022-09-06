@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
+import { BlogPage } from "src/components/BlogPage";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Hero } from "src/components/Hero";
 import { PortfolioPage } from "src/components/portfolio/PortfolioPage";
-import Blog from "./blog";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +12,7 @@ const Home: NextPage = () => {
         <Header />
       </div>
       <Hero />
+      <BlogPage/>
       <div className="mt-32">
         <PortfolioPage />
       </div>

@@ -17,7 +17,6 @@ export type Blog = {
 type Props = MicroCMSListResponse<Blog>;
 
 const Blog: NextPage<Props> = (props) => {
-  console.log(props);
   return (
     <div>
       <div className="sticky top-0 z-50">
