@@ -5,7 +5,7 @@ import React, { FC } from "react";
 import { Blog } from "src/pages/blog";
 
 
-export const BlogPage: FC<Props> = (props) => {
+export const BlogPage: FC= (props) => {
   
   return (
     <Container>
@@ -14,7 +14,7 @@ export const BlogPage: FC<Props> = (props) => {
           Blog
         </Title>
       </Stack>
-      
+
       <Center className="mt-6">
         <Button color="dark" radius="xl">
           View All
