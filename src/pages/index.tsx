@@ -1,18 +1,20 @@
+import { MicroCMSListResponse } from "microcms-js-sdk";
 import type { NextPage } from "next";
-import { BlogPage } from "src/components/BlogPage";
+import { BlogPage } from "src/components/blog/BlogPage";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Hero } from "src/components/Hero";
 import { PortfolioPage } from "src/components/portfolio/PortfolioPage";
 
-const Home: NextPage = () => {
+
+const Home: NextPage = (props) => {
   return (
     <div>
       <div className="sticky top-0 z-50">
         <Header />
       </div>
       <Hero />
-      <BlogPage/>
+      <BlogPage />
       <div className="mt-32">
         <PortfolioPage />
       </div>
