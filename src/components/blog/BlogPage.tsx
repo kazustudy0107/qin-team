@@ -1,15 +1,7 @@
-import { Button, Center, Container, Stack, Text, Title } from "@mantine/core";
-import Link from "next/link";
-import React, { FC } from "react";
-import dayjs from "dayjs";
+import { Button, Center, Container, Stack, Title } from "@mantine/core";
+import React from "react";
 
-export type Blog = {
-  id: string;
-  title: string;
-  content: string;
-};
-
-export const BlogPage: FC = (props) => {
+export const BlogPage = () => {
   return (
     <Container>
       <Stack justify="flex-start" spacing="xl">
@@ -17,6 +9,7 @@ export const BlogPage: FC = (props) => {
           Blog
         </Title>
       </Stack>
+
       {/* <ul>
         {props.map((content) => {
           return (
